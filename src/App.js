@@ -7,16 +7,14 @@ import AppContainer from "./components/AppContainer";
 function App() {
   return (
     <>
+      <header className="p-5 bg-danger text-white text-center mb-4">
+        <h1 className="display-2">Quoi de neuf, Google Fonts ?</h1>
+        <p className="h4">
+          Les plus récentes, les plus <i>trendy</i> et les plus populaires
+          polices Google.
+        </p>
+      </header>
       <AppContainer>
-        <header className="container my-4">
-          <h1 className="display-3 text-center mb-4">
-            Quoi de neuf, Google Fonts ?
-          </h1>
-          <p className="h4 text-center mb-4">
-            Les plus récentes, les plus <i>trendy</i> et les plus populaires
-            polices Google.
-          </p>
-        </header>
         <main>
           <GoogleFontsLoader />
           <Fonts />
