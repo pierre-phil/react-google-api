@@ -12,7 +12,20 @@ function App() {
       <header className="p-5 bg-danger text-white text-center mb-4">
         <h1 className="display-2">Quoi de neuf, Google Fonts ?</h1>
         <p className="h4">
-          Les plus récentes, les plus <i>trendy</i> et les plus populaires
+          Les plus{" "}
+          <a className="text-decoration-none text-dark" href="#recent">
+            récentes
+          </a>
+          , les plus{" "}
+          <i>
+            <a className="text-decoration-none text-dark" href="#trendy">
+              trendy
+            </a>
+          </i>{" "}
+          et les plus{" "}
+          <a className="text-decoration-none text-dark" href="#popular">
+            populaires
+          </a>{" "}
           polices Google.
         </p>
       </header>

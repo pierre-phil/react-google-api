@@ -9,21 +9,27 @@ const Fonts = () => {
       <section className="mb-5">
         <hr></hr>
         <h2>
-          <span className="badge bg-danger badge-lg">Les plus récentes</span>
+          <span className="badge bg-danger badge-lg" id="recent">
+            Les plus récentes
+          </span>
         </h2>
         <Recent />
       </section>
       <section className="mb-5">
         <hr></hr>
         <h2>
-          <span className="badge bg-danger">Les plus populaires</span>
+          <span className="badge bg-danger" id="popular">
+            Les plus populaires
+          </span>
         </h2>
         <Popular />
       </section>
       <section className="mb-5">
         <hr></hr>
         <h2>
-          <span className="badge bg-danger">Tendance</span>
+          <span className="badge bg-danger" id="trendy">
+            Tendance
+          </span>
         </h2>
         <Trending />
       </section>
