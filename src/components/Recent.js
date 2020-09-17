@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { PreviewContext } from "../context/PreviewContext";
 
 const Recent = () => {
   const [recentFonts, setRecentFonts] = useState([]);
+  const { previewText } = useContext(PreviewContext);
 
   useEffect(() => {
     const API_KEY = process.env.REACT_APP_GFONTS_API_KEY;
@@ -23,8 +25,6 @@ const Recent = () => {
       });
   }, []);
 
-  console.log("recentFonts", recentFonts);
-
   return (
     <section className="row my-3">
       {recentFonts.map((el) => {
@@ -38,7 +38,7 @@ const Recent = () => {
               <p>
                 <span className="badge bg-dark">{el.category}</span>
               </p>
-              <p className="sample">text sample here</p>
+              <p className="sample">{previewText}</p>
               <a
                 rel="noopener noreferrer"
                 target="_blank"

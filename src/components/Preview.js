@@ -3,14 +3,22 @@ import { PreviewContext } from "../context/PreviewContext";
 
 const Preview = () => {
   const { previewText, setPreviewText } = useContext(PreviewContext);
+  const handleTextChange = (event) => {
+    setPreviewText(event.target.value);
+  };
   return (
     <section className="col-lg-3">
       <div className="my-3">
         <label className="form-label font-weight-bold mb-3" htmlFor="textinput">
           Tapez votre texte
         </label>
-        <textarea id="textinput" className="form-control" rows="4">
-          {setPreviewText(previewText)}
+        <textarea
+          id="textinput"
+          className="form-control"
+          rows="4"
+          onChange={handleTextChange}
+        >
+          {previewText}
         </textarea>
       </div>
       <div className="my-3">
