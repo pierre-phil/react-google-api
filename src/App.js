@@ -5,11 +5,12 @@ import AppContainer from "./components/AppContainer";
 import Preview from "./components/Preview";
 import PreviewContextProvider from "./context/PreviewContext";
 import SizeContextProvider from "./context/SizeContext";
+import ModeContextProvider from "./context/ModeContext";
 
 function App() {
   return (
     <>
-      <header className="p-5 bg-danger text-white text-center mb-4">
+      <header className="p-5 bg-danger text-white text-center">
         <h1 className="display-2">Quoi de neuf, Google Fonts ?</h1>
         <p className="h4">
           Les plus{" "}
@@ -29,19 +30,23 @@ function App() {
           polices Google.
         </p>
       </header>
-      <AppContainer>
-        <PreviewContextProvider>
-          <SizeContextProvider>
-            <main>
-              <GoogleFontsLoader />
-              <div className="row">
-                <Preview />
-                <Fonts />
-              </div>
-            </main>
-          </SizeContextProvider>
-        </PreviewContextProvider>
-      </AppContainer>
+      <ModeContextProvider>
+        <AppContainer>
+          <div className="container">
+            <PreviewContextProvider>
+              <SizeContextProvider>
+                <main>
+                  <GoogleFontsLoader />
+                  <div className="row">
+                    <Preview />
+                    <Fonts />
+                  </div>
+                </main>
+              </SizeContextProvider>
+            </PreviewContextProvider>
+          </div>
+        </AppContainer>
+      </ModeContextProvider>
       <footer className="p-3 text-center bg-dark text-light">
         With <span className="text-danger">love</span> &{" "}
         <span className="text-primary">React</span> from{" "}

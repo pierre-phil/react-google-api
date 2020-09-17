@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { PreviewContext } from "../context/PreviewContext";
 import { SizeContext } from "../context/SizeContext";
+import ModeSwitch from "./ModeSwitch";
 
 const Preview = () => {
   const { previewText, setPreviewText } = useContext(PreviewContext);
@@ -39,6 +40,10 @@ const Preview = () => {
           type="range"
           onChange={handleSizeChange}
         ></input>
+      </div>
+      <div className="my-3">
+        <p className="form-label font-weight-bold mb-3">Mode sombre</p>
+        <ModeSwitch />
       </div>
     </section>
   );
