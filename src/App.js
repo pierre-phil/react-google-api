@@ -1,6 +1,6 @@
 import React from "react";
 import GoogleFontsLoader from "./components/GoogleFontsLoader";
-import Fonts from "./components/index";
+import Recent from "./components/Recent";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       </header>
       <main>
         <GoogleFontsLoader />
-        <Fonts />
+        <Recent />
       </main>
     </>
   );
