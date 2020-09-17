@@ -3,6 +3,7 @@ import GoogleFontsLoader from "./components/GoogleFontsLoader";
 import Recent from "./components/Recent";
 import Fonts from "../src/components/index";
 import AppContainer from "./components/AppContainer";
+import Preview from "./components/Preview";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <main>
           <GoogleFontsLoader />
           <div className="row">
-            <section className="col-lg-3">caca boudin</section>
+            <Preview />
             <Fonts />
           </div>
         </main>
