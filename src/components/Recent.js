@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const Recent = () => {
-  const [fonts, setFonts] = useState([]);
+  const [recentFonts, setRecentFonts] = useState([]);
 
   useEffect(() => {
     const API_KEY = process.env.REACT_APP_GFONTS_API_KEY;
@@ -16,21 +16,42 @@ const Recent = () => {
         throw new Error("font introuvable");
       })
       .then((result) => {
-        setFonts(result.items.slice(0, 10));
+        setRecentFonts(result.items.slice(0, 10));
       })
       .catch((error) => {
         alert(error.message);
       });
   }, []);
 
-  console.log("fonts", fonts);
+  console.log("recentFonts", recentFonts);
 
   return (
-    <>
-      {fonts.map((el) => {
-        return <div key={el.family}>{el.family}</div>;
+    <section className="row">
+      {recentFonts.map((el) => {
+        return (
+          <article className="col-lg-6 mb-3">
+            <div key={el.family} className="shadow p-3">
+              <h4 className="d-flex align-items-center justify-content-between">
+                <span>{el.family}</span>
+                <small>{`${el.variants.length} variant(s)`}</small>
+              </h4>
+              <p>
+                <span className="badge bg-dark">{el.category}</span>
+              </p>
+              <p className="sample">text sample here</p>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                className="text-danger"
+                href={`https://fonts.google.com/specimen/${el.family}`}
+              >
+                Voir sur Google Fonts
+              </a>
+            </div>
+          </article>
+        );
       })}
-    </>
+    </section>
   );
 };
 
