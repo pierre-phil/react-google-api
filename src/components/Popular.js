@@ -10,7 +10,7 @@ const Popular = () => {
 
   useEffect(() => {
     const API_KEY = process.env.REACT_APP_GFONTS_API_KEY;
-    const url = `https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyCmgOX-4uVu7DlmjOWrO-xD_dC_0-raOFc&sort=popularity`;
+    const url = `https://www.googleapis.com/webfonts/v1/webfonts?key=${API_KEY}&sort=popularity`;
     // fonts triés par date
 
     fetch(url)
