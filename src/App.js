@@ -5,6 +5,7 @@ import Fonts from "../src/components/index";
 import AppContainer from "./components/AppContainer";
 import Preview from "./components/Preview";
 import PreviewContextProvider from "./context/PreviewContext";
+import SizeContextProvider from "./context/SizeContext";
 
 function App() {
   return (
@@ -18,13 +19,15 @@ function App() {
       </header>
       <AppContainer>
         <PreviewContextProvider>
-          <main>
-            <GoogleFontsLoader />
-            <div className="row">
-              <Preview />
-              <Fonts />
-            </div>
-          </main>
+          <SizeContextProvider>
+            <main>
+              <GoogleFontsLoader />
+              <div className="row">
+                <Preview />
+                <Fonts />
+              </div>
+            </main>
+          </SizeContextProvider>
         </PreviewContextProvider>
       </AppContainer>
       <footer className="p-3 text-center bg-dark text-light">

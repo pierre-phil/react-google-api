@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
 import { PreviewContext } from "../context/PreviewContext";
 import GoogleFontLoader from "react-google-font-loader";
+import { SizeContext } from "../context/SizeContext";
 
 const Popular = () => {
   const [popularFonts, setPopularFonts] = useState([]);
   const { previewText } = useContext(PreviewContext);
+  const { size } = useContext(SizeContext);
 
   useEffect(() => {
     const API_KEY = process.env.REACT_APP_GFONTS_API_KEY;
@@ -50,7 +52,10 @@ const Popular = () => {
               </p>
               <p
                 className="sample"
-                style={{ fontFamily: `${el.family}, monospaced` }}
+                style={{
+                  fontFamily: `${el.family}, monospaced`,
+                  fontSize: `${size}px`,
+                }}
               >
                 {previewText}
               </p>

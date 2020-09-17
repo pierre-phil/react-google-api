@@ -1,10 +1,15 @@
 import React, { useContext } from "react";
 import { PreviewContext } from "../context/PreviewContext";
+import { SizeContext } from "../context/SizeContext";
 
 const Preview = () => {
   const { previewText, setPreviewText } = useContext(PreviewContext);
+  const { size, setSize } = useContext(SizeContext);
   const handleTextChange = (event) => {
     setPreviewText(event.target.value);
+  };
+  const handleSizeChange = (event) => {
+    setSize(event.target.value);
   };
   return (
     <section className="col-lg-3">
@@ -32,6 +37,7 @@ const Preview = () => {
           defaultValue="20"
           className="form-range"
           type="range"
+          onChange={handleSizeChange}
         ></input>
       </div>
     </section>
