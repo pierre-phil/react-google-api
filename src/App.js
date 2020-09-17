@@ -1,6 +1,5 @@
 import React from "react";
 import GoogleFontsLoader from "./components/GoogleFontsLoader";
-import Recent from "./components/Recent";
 import Fonts from "../src/components/index";
 import AppContainer from "./components/AppContainer";
 import Preview from "./components/Preview";

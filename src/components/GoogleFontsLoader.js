@@ -18,13 +18,6 @@ const GoogleFontsLoader = () => {
         ]}
         subsets={["cyrillic-ext", "greek"]}
       />
-
-      <p style={{ fontFamily: "Roboto Mono, monospaced" }}>
-        This will be in Epilogue!
-      </p>
-      <p style={{ fontFamily: "Roboto, sans-serif" }}>
-        This will be in Roboto!
-      </p>
     </>
   );
 };

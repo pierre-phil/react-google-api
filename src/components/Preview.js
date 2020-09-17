@@ -4,7 +4,7 @@ import { SizeContext } from "../context/SizeContext";
 
 const Preview = () => {
   const { previewText, setPreviewText } = useContext(PreviewContext);
-  const { size, setSize } = useContext(SizeContext);
+  const { setSize } = useContext(SizeContext);
   const handleTextChange = (event) => {
     setPreviewText(event.target.value);
   };
