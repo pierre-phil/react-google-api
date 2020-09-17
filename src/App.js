@@ -43,7 +43,9 @@ function App() {
         </PreviewContextProvider>
       </AppContainer>
       <footer className="p-3 text-center bg-dark text-light">
-        With love & React from [Orange Team] for Alyra
+        With <span className="text-danger">love</span> &{" "}
+        <span className="text-primary">React</span> from{" "}
+        <span className="text-warning">[Orange Team]</span> for <b>Alyra</b>
       </footer>
     </>
   );
