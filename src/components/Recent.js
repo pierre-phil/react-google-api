@@ -26,15 +26,15 @@ const Recent = () => {
   console.log("recentFonts", recentFonts);
 
   return (
-    <section className="row">
+    <section className="row my-3">
       {recentFonts.map((el) => {
         return (
           <article className="col-lg-6 mb-3">
             <div key={el.family} className="shadow p-3">
-              <h4 className="d-flex align-items-center justify-content-between">
+              <h3 className="d-flex align-items-center justify-content-between">
                 <span>{el.family}</span>
                 <small>{`${el.variants.length} variant(s)`}</small>
-              </h4>
+              </h3>
               <p>
                 <span className="badge bg-dark">{el.category}</span>
               </p>
