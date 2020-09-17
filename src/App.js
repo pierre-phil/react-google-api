@@ -17,7 +17,10 @@ function App() {
       <AppContainer>
         <main>
           <GoogleFontsLoader />
-          <Fonts />
+          <div className="row">
+            <section className="col-lg-3">caca boudin</section>
+            <Fonts />
+          </div>
         </main>
       </AppContainer>
       <footer className="p-3 text-center bg-dark text-light">

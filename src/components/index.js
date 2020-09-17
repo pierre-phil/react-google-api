@@ -5,7 +5,7 @@ import Trending from "./Trending";
 
 const Fonts = () => {
   return (
-    <>
+    <div className="col-lg-9">
       <section className="mb-5">
         <hr></hr>
         <h2>
@@ -27,7 +27,7 @@ const Fonts = () => {
         </h2>
         <Trending />
       </section>
-    </>
+    </div>
   );
 };
 

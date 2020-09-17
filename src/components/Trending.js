@@ -31,7 +31,7 @@ const Trending = () => {
             <div key={el.family} className="shadow p-3">
               <h3 className="d-flex align-items-center justify-content-between">
                 <span>{el.family}</span>
-                <small>{`${el.variants.length} variant(s)`}</small>
+                <small className="h6">{`${el.variants.length} variant(s)`}</small>
               </h3>
               <p>
                 <span className="badge bg-dark">{el.category}</span>
