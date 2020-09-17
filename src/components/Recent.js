@@ -29,8 +29,8 @@ const Recent = () => {
     <section className="row my-3">
       {recentFonts.map((el) => {
         return (
-          <article className="col-lg-6 mb-3">
-            <div key={el.family} className="shadow p-3">
+          <article className="col-lg-6 mb-3" key={el.family}>
+            <div className="shadow p-3">
               <h3 className="d-flex align-items-center justify-content-between">
                 <span>{el.family}</span>
                 <small className="h6">{`${el.variants.length} variant(s)`}</small>

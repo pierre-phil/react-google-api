@@ -4,6 +4,7 @@ import Recent from "./components/Recent";
 import Fonts from "../src/components/index";
 import AppContainer from "./components/AppContainer";
 import Preview from "./components/Preview";
+import PreviewContextProvider from "./context/PreviewContext";
 
 function App() {
   return (
@@ -16,13 +17,15 @@ function App() {
         </p>
       </header>
       <AppContainer>
-        <main>
-          <GoogleFontsLoader />
-          <div className="row">
-            <Preview />
-            <Fonts />
-          </div>
-        </main>
+        <PreviewContextProvider>
+          <main>
+            <GoogleFontsLoader />
+            <div className="row">
+              <Preview />
+              <Fonts />
+            </div>
+          </main>
+        </PreviewContextProvider>
       </AppContainer>
       <footer className="p-3 text-center bg-dark text-light">
         With love & React from [Orange Team] for Alyra
