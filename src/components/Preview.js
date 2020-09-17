@@ -17,9 +17,8 @@ const Preview = () => {
           className="form-control"
           rows="4"
           onChange={handleTextChange}
-        >
-          {previewText}
-        </textarea>
+          defaultValue={previewText}
+        ></textarea>
       </div>
       <div className="my-3">
         <label className="form-label font-weight-bold mb-3" htmlFor="range">

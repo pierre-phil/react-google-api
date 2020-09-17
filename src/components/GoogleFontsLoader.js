@@ -1,28 +1,35 @@
 import React from "react";
 import GoogleFontLoader from "react-google-font-loader";
+import Recent from "./Recent";
 
-const GoogleFontsLoader = () => (
-  <>
-    {/* Use it! */}
-    <GoogleFontLoader
-      fonts={[
-        {
-          font: "Roboto",
-          weights: [400, "400i"],
-        },
-        {
-          font: "Roboto Mono",
-          weights: [400, 700],
-        },
-      ]}
-      subsets={["cyrillic-ext", "greek"]}
-    />
+const GoogleFontsLoader = (props) => {
+  const { recentFonts, setRecentFonts } = props;
 
-    <p style={{ fontFamily: "Roboto Mono, monospaced" }}>
-      This will be in Roboto Mono!
-    </p>
-    <p style={{ fontFamily: "Roboto, sans-serif" }}>This will be in Roboto!</p>
-  </>
-);
+  return (
+    <>
+      {/* Use it! */}
+      <GoogleFontLoader
+        fonts={[
+          {
+            font: "Roboto",
+            weights: [400, "400i"],
+          },
+          {
+            font: "Roboto Mono",
+            weights: [400, 700],
+          },
+        ]}
+        subsets={["cyrillic-ext", "greek"]}
+      />
+
+      <p style={{ fontFamily: "Roboto Mono, monospaced" }}>
+        This will be in Epilogue!
+      </p>
+      <p style={{ fontFamily: "Roboto, sans-serif" }}>
+        This will be in Roboto!
+      </p>
+    </>
+  );
+};
 
 export default GoogleFontsLoader;
