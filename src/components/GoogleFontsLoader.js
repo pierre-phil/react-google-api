@@ -1,10 +1,7 @@
 import React from "react";
 import GoogleFontLoader from "react-google-font-loader";
-import Recent from "./Recent";
 
-const GoogleFontsLoader = (props) => {
-  const { recentFonts, setRecentFonts } = props;
-
+const GoogleFontsLoader = () => {
   return (
     <>
       {/* Use it! */}
