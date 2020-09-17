@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { PreviewContext } from "../context/PreviewContext";
+import GoogleFontLoader from "react-google-font-loader";
 
 const Trending = () => {
   const [trendingFonts, setTrendingFonts] = useState([]);
@@ -31,6 +32,15 @@ const Trending = () => {
         return (
           <article className="col-lg-6 mb-3" key={el.family}>
             <div className="shadow p-3">
+              <GoogleFontLoader
+                fonts={[
+                  {
+                    font: `${el.family}`,
+                    weights: [400],
+                  },
+                ]}
+                subsets={[]}
+              />
               <h3 className="d-flex align-items-center justify-content-between">
                 <span>{el.family}</span>
                 <small className="h6">{`${el.variants.length} variant(s)`}</small>
@@ -38,7 +48,12 @@ const Trending = () => {
               <p>
                 <span className="badge bg-dark">{el.category}</span>
               </p>
-              <p className="sample">{previewText}</p>
+              <p
+                className="sample"
+                style={{ fontFamily: `${el.family}, monospaced` }}
+              >
+                {previewText}
+              </p>
               <a
                 rel="noopener noreferrer"
                 target="_blank"

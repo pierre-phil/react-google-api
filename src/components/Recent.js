@@ -39,7 +39,7 @@ const Recent = () => {
                     weights: [400],
                   },
                 ]}
-                subsets={["cyrillic-ext", "greek"]}
+                subsets={[]}
               />
               <h3 className="d-flex align-items-center justify-content-between">
                 <span>{el.family}</span>
