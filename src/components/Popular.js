@@ -63,7 +63,9 @@ const Popular = () => {
                 rel="noopener noreferrer"
                 target="_blank"
                 className="text-danger"
-                href={`https://fonts.google.com/specimen/${el.family}`}
+                href={`https://fonts.google.com/specimen/${el.family
+                  .split(" ")
+                  .join("+")}`}
               >
                 Voir sur Google Fonts
               </a>
