@@ -48,7 +48,9 @@ const Trending = () => {
                 <small className="h6">{`${el.variants.length} variant(s)`}</small>
               </h3>
               <p>
-                <span className="badge bg-dark">{el.category}</span>
+                <span className="badge bg-dark">
+                  {el.category.toUpperCase()}
+                </span>
               </p>
               <p
                 className="sample"
