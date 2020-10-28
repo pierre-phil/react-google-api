@@ -1,6 +1,6 @@
 #### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-##### It is a little one-page site for an electro-pop band, featuring links to their stream platforms and some other stuff.
+##### It is a simple app showing most popular & trending Google Fonts based on Google Fonts API, with ability to preview result with sample text.
 
 Site is live here : https://react-googlefonts-api.netlify.app/
 
